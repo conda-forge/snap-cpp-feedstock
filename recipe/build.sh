@@ -3,4 +3,4 @@ then
     export LDFLAGS="${LDFLAGS} -Wl,-rpath-link,${PREFIX}/lib"
 fi
 
-make all CC="${CC}" CXX="${CXX}" LD="${LD}"
+make all CC="${CXX}" CXX="${CXX}" LD="${LD}"
