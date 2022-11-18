@@ -1,6 +1,6 @@
 {% set name = "snap-cpp" %}
-{% set version = "4.1" %}
-{% set sha256 = "c756e0b4e6ed9681f1dc3d7405326208f6e3eb8f6b7a0ae547c4238a8c5c9f0e" %}
+{% set version = "6.0" %}
+{% set sha256 = "3322960a9376ae33349bddb62bb04b07891d23b4b461e52c1ed562d79b73f55a" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  skip: True  # [win]
+  skip: true  # [win]
   number: 0
 
 requirements:
@@ -25,15 +25,13 @@ test:
     - examples
   commands:
     - cd examples/graphgen && ./graphgen -g:w -n:1000 -k:4 -p:0.1 -o:smallworld.txt
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 
 about:
   home: http://snap.stanford.edu/snap/
   license: BSD
-  license_file: '{{ environ["RECIPE_DIR"] }}/License.txt'
-  summary: 'General purpose, high performance system for analysis and manipulation of large networks.'
+  license_file: {{ environ["RECIPE_DIR"] }}/License.txt
+  summary: General purpose, high performance system for analysis and manipulation of large networks.
   description: |
     Stanford Network Analysis Platform (SNAP) is a general purpose, 
     high performance system for analysis and manipulation of large 
