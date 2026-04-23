@@ -1,6 +1,6 @@
 {% set name = "snap-cpp" %}
-{% set version = "4.1" %}
-{% set sha256 = "c756e0b4e6ed9681f1dc3d7405326208f6e3eb8f6b7a0ae547c4238a8c5c9f0e" %}
+{% set version = "5.0" %}
+{% set sha256 = "3abffc029776143622149ba7ffbcebb2d8d0cd668098c8bde22559a450f53406" %}
 
 package:
   name: {{ name|lower }}
